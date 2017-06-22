@@ -23,3 +23,6 @@ in `new_framework_defaults.rb`
 2.Use SASS @import instead of Sprockets directives
 SASS @import creates a global namespace, while the Sprockets directives do not.
 ref:https://content.pivotal.io/blog/structure-your-sass-files-with-import
+
+3.Use Rspec to generate test documentation
+`rspec --format documentation`
