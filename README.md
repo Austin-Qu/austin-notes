@@ -26,3 +26,6 @@ ref:https://content.pivotal.io/blog/structure-your-sass-files-with-import
 
 3.Use Rspec to generate test documentation
 `rspec --format documentation`
+
+4.ENV variables not working in rails console, try to restart spring
+`stop spring`
