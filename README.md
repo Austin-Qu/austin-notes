@@ -40,4 +40,4 @@ FYI:https://stackoverflow.com/questions/8514167/float-vs-decimal-in-activerecord
 
 ## Heroku
 
-1. `heroku pg:reset DATABASE_URL` to recreate database
+1. `heroku pg:reset DATABASE_URL` to recreate postgresql database
