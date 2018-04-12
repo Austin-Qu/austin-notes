@@ -19,7 +19,7 @@ V1/2/3: product_level, attribute_set
 
 1. PIM: 
   * Comment out after_save/after_create callbacks in app/models/tenant.rb. In #initialize_db, run `Apartment::Tenant.create(self.name)` to generate schema for a tenant then #create this tenant instance
-  * Run #inintialize_s3, rest of #initialize_db and #initialize_sidekiq
+  * Run #initialize_s3, rest of #initialize_db and #initialize_sidekiq
   * Run #update_heartbeat
 2. Create same tenant instance in AdminCentral, CM, OM under public schema, tid in PIM/CM/OM same as the tenant's id in AdminCentral
 3. AdminCentral:
