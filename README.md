@@ -14,6 +14,8 @@ pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
 pg_ctl -D /usr/local/var/postgres stop -s -m fast
 ```
 
+Use brew service to autorun Postgres, `createuser xxxxxx` to create user.
+
 ## Rails
 
 1. Rails 5 changed:
