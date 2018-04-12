@@ -1,5 +1,4 @@
-# austin-repo
-### Austin's dev notes
+# Austin's dev notes
 
 ## Environment Setup
 
