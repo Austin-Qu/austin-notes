@@ -15,7 +15,7 @@ V1/2/3: product_level, attribute_set
 
 [Single Sign-On for Local Dev Environment](https://fusionfactory.atlassian.net/wiki/spaces/CC/pages/3571785/Single+Sign-On+for+Local+Dev+Environment)
 
-### What to do if failed to create tenants via GUI
+### What to do if failed to create tenants via GUI (due to PG transaction error)
 
 1. PIM: 
   * Comment out after_save/after_create callbacks in app/models/tenant.rb. In #initialize_db, run `Apartment::Tenant.create(self.name)` to generate schema for a tenant then #create this tenant instance
