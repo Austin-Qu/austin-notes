@@ -7,6 +7,7 @@ Gems: Apartment, Globalize, RequestStore
 ### How to tell V5 from other versions
 
 V5: product_class, attribute_value
+
 V1/2/3: product_level, attribute_set
 
 ### Env setup
