@@ -28,7 +28,7 @@ V1/2/3: product_level, attribute_set
   
 ### Misc
 
-  * ruby 2.4 not compatible with rest-client for now
+  * ruby 2.4 not compatible with rest-client for now (ruby 2.2 recommended, 2.3 seems all good)
   * restart POW if nothing hits local server
   * Heartbeat to update products in Export items
   * Stage after new channel built, **heartbeat** if channel fields order changed, **stage** again if channel fields content changed
