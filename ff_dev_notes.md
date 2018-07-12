@@ -35,3 +35,12 @@ V1/2/3: product_level, attribute_set
   * Heartbeat to update products in Export items
   * Stage after new channel built, **heartbeat** if channel fields order changed, **stage** again if channel fields content changed
   * When to choose multiple source classes in field: when multiple product class hierarchies exist, normally only choose 1  class on SKU class type.
+  
+
+### get tenant name which has some certain channel
+
+Tenant.where(version: 5).each do | tenant |
+  Apartment::Tenant.switch(tenant) do
+    puts tenant.name if Channel.where(type: 'AnatwineChannel').size > 0
+  end
+end
