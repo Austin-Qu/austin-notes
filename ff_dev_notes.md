@@ -39,8 +39,10 @@ V1/2/3: product_level, attribute_set
 
 ### get tenant name which has some certain channel
 
+```
 Tenant.where(version: 5).each do | tenant |
   Apartment::Tenant.switch(tenant) do
     puts tenant.name if Channel.where(type: 'AnatwineChannel').size > 0
   end
 end
+```
