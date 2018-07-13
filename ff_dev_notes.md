@@ -80,3 +80,4 @@ ln -s /usr/local/openssl-1.0.2h/bin/openssl /usr/local/bin/openssl
 Close terminal, open a new session, and verify OS X is using your new openssl:
 
 openssl version -a
+(Using openssl-1.0.2o, working normally)
