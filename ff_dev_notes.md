@@ -46,3 +46,37 @@ Tenant.where(version: 5).each do | tenant |
   end
 end
 ```
+
+### OpenSSL issue
+
+https://stackoverflow.com/questions/38670295/homebrew-refusing-to-link-openssl/38710248#38710248
+
+None of these solutions worked for me on OS X El Capitan 10.11.6. Probably because OS X has a native version of openssl that it believes is superior, and as such, does not like tampering.
+
+So, I took the high road and started fresh...
+
+Manually install and symlink
+cd /usr/local/src  
+If you're getting "No such file or directory", make it:
+
+cd /usr/local && mkdir src && cd src
+
+Download openssl:
+
+curl --remote-name https://www.openssl.org/source/openssl-1.0.2h.tar.gz
+Extract and cd in:
+
+tar -xzvf openssl-1.0.2h.tar.gz
+cd openssl-1.0.2h
+Compile and install:
+
+./configure darwin64-x86_64-cc --prefix=/usr/local/openssl-1.0.2h shared
+make depend
+make
+make install
+Now symlink OS X's openssl to your new and updated openssl:
+
+ln -s /usr/local/openssl-1.0.2h/bin/openssl /usr/local/bin/openssl
+Close terminal, open a new session, and verify OS X is using your new openssl:
+
+openssl version -a
