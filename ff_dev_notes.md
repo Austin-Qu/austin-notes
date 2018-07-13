@@ -47,7 +47,7 @@ Tenant.where(version: 5).each do | tenant |
 end
 ```
 
-### OpenSSL issue
+### OpenSSL issue for MAC OS
 
 https://stackoverflow.com/questions/38670295/homebrew-refusing-to-link-openssl/38710248#38710248
 
