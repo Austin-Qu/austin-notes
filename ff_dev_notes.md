@@ -37,7 +37,7 @@ V1/2/3: product_level, attribute_set
   * When to choose multiple source classes in field: when multiple product class hierarchies exist, normally only choose 1  class on SKU class type.
   
 
-### get tenant name which has some certain channel
+### Get tenant name which has some certain channel
 
 ```
 Tenant.where(version: 5).each do | tenant |
