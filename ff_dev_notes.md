@@ -35,6 +35,10 @@ V1/2/3: product_level, attribute_set
   * Heartbeat to update products in Export items
   * Stage after new channel built, **heartbeat** if channel fields order changed, **stage** again if channel fields content changed
   * When to choose multiple source classes in field: when multiple product class hierarchies exist, normally only choose 1  class on SKU class type.
+  * SCP syntax
+    `scp deploy@ec2-54-252-204-134.ap-southeast-2.compute.amazonaws.com:/data/channel_manager/current/1.csv /Users/austinqu/Downloads`
+  * Pluck with Globalize
+    `AttributeDefinition.includes(:translations).where(base_type: 12).pluck('attribute_definition_translations.code')`
   
 
 ### Get tenant name which has some certain channel
