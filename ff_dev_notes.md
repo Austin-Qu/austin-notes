@@ -37,6 +37,7 @@ V1/2/3: product_level, attribute_set
   * When to choose multiple source classes in field: when multiple product class hierarchies exist, normally only choose 1  class on SKU class type.
   * SCP syntax
     `scp deploy@ec2-54-252-204-134.ap-southeast-2.compute.amazonaws.com:/data/channel_manager/current/1.csv /Users/austinqu/Downloads`
+    `scp 1.csv deploy@ec2-54-252-204-134.ap-southeast-2.compute.amazonaws.com:/tmp/ `
   * Pluck with Globalize
     `AttributeDefinition.includes(:translations).where(base_type: 12).pluck('attribute_definition_translations.code')`
   
