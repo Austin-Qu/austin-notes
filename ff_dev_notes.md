@@ -86,3 +86,12 @@ Close terminal, open a new session, and verify OS X is using your new openssl:
 
 openssl version -a
 (Using openssl-1.0.2o, working normally)
+
+### Filter jobs in retry queue
+
+```
+re = Sidekiq::RetrySet.new
+re.select do |j|
+  j.retry if j.queue == 'iantesting5'
+end
+```
