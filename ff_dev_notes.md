@@ -52,6 +52,12 @@ Tenant.where(version: 5).each do | tenant |
 end
 ```
 
+### Find all duplicated attribute_values
+
+```
+AttributeValue.limit(200).select(:product_id, :attribute_definition_id).group(:product_id, :attribute_definition_id).having("count(*) > 1").size
+```
+
 ### OpenSSL issue for MAC OS
 
 https://stackoverflow.com/questions/38670295/homebrew-refusing-to-link-openssl/38710248#38710248
