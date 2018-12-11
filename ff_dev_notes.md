@@ -101,3 +101,11 @@ re.select do |j|
   j.retry if j.queue == 'iantesting5'
 end
 ```
+
+### Monkey-patch transmitter
+
+1. Patch the code.
+2. Set thread max to 0 for the tenant
+3. Find the 'job', eg. an export scheduler
+4. run `job.scheduler.run(SecureRandom.uuid)` to create the sidekiq job
+5. find this job in 'enqueued', use the params to run the patched transmitter. eg `OroCommerce::Export::Transmitters::BatchTransmitter.new.perform(2, 17331)`
