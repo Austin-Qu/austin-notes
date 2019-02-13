@@ -109,3 +109,13 @@ end
 3. Find the 'job', eg. an export scheduler
 4. Run `job.scheduler.run(SecureRandom.uuid)` to create the sidekiq job
 5. Find this job in 'enqueued', use the params to run the patched transmitter. eg.  `OroCommerce::Export::Transmitters::BatchTransmitter.new.perform(2, 17331)`
+
+
+### Mock Prod Env from Local(PIM)
+
+1. Replace content of config/environments/production.rb with config/environments/developmment.rb
+2. Add 'production' section for config/database.yml and config/secrets.yml, using the content from 'development' section
+3. Replace content of config/settings/production.rb with config/settings/developmment.rb(do this for both PIM and admin-central apps)
+4. Comment out line "force_ssl" from app/controllers/application_controller.rb
+
+1. 
