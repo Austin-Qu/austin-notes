@@ -115,5 +115,5 @@ end
 
 1. Replace content of config/environments/production.rb with config/environments/development.rb
 2. Add 'production' section for config/database.yml and config/secrets.yml, using the content from 'development' section
-3. Replace content of config/settings/production.rb with config/settings/developmment.rb(do this for both PIM and admin-central apps)
+3. Replace content of config/settings/production.rb with config/settings/development.rb(do this for both PIM and admin-central apps)
 4. Comment out line "force_ssl" from app/controllers/application_controller.rb
