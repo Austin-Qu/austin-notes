@@ -42,3 +42,16 @@ FYI:https://stackoverflow.com/questions/8514167/float-vs-decimal-in-activerecord
 ## Heroku
 
 1. Use `heroku pg:reset DATABASE_URL` to recreate postgresql database
+
+
+## Git
+
+To check changes from last pull
+
+* See all of the changes: git diff master@{1} master
+* See the changes to a given file: git diff master@{1} master <file>
+* See all the changes within a given directory: git diff master@{1} master <dir>
+* See the summary of changes again: git diff --stat master@{1} master
+
+HEAD is the name for the currently checked out branch.
+
