@@ -39,6 +39,9 @@ Use float when you don't care about precision too much. For example, some scient
 Use decimal if you are dealing with numbers that need to be precise and sum up to correct number (like compounding interests and money-related things). Remember: if you need precision, then you should always use decimal.
 FYI:https://stackoverflow.com/questions/8514167/float-vs-decimal-in-activerecord
 
+6. Find out processes occupying a port
+lsof -wni tcp:3004
+
 ## Heroku
 
 1. Use `heroku pg:reset DATABASE_URL` to recreate postgresql database
